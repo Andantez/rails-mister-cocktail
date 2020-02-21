@@ -4,7 +4,7 @@
   
   <% @cocktails.each do |cocktail| %>
   <div class="each">
-    
+   
      <%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-name"%>
       
      <%= link_to "Delete",
