@@ -1,24 +1,25 @@
 
-<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(assets/banner4.jpg);">
+  <div class="container">
+      <h1>The best cocktail recipes !</h1>
+      <p>Learn how to make your own cocktail !</p>
+
+  </div> 
+</div>
   
-  
-  <% @cocktails.each do |cocktail| %>
-  <div class="each">
-   
-     <%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-name"%>
       
-     <%= link_to "Delete",
-                      cocktail_path(cocktail),
-                      method: :delete,
-                      data: { confirm: "Are you sure?" },
-                      class: "btn btn-primary btn-sm" %>
-    <% end %>
-  </div>
-  <%= link_to "Create Cocktail", new_cocktail_path %>
+ 
+      <div class="card-container">
+        
+      <% @cocktails.each do |cocktail| %>
+          <div class="card">
+               <%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-name"%>
+          </div>
+      <% end %>
+      </div>
+   <div class="create-cocktail">
+     
+    <%= link_to "Create Cocktail", new_cocktail_path, class: "create"%>
+   </div>
   
-  
-
-</div> 
-
-
-
+ 

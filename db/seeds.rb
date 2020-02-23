@@ -26,4 +26,3 @@ end
     name: %w[lemon ice mint leaves].sample
   )
 end
-
